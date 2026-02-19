@@ -35,7 +35,7 @@ ProGuard para analizar el impacto en la ingeniería inversa.
 ### 1️⃣ Clonar el repositorio
 
 ``` bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/jpinedac17/Practica-Pilas-Maven.git
 cd stackHandler
 ```
 

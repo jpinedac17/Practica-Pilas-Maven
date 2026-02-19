@@ -15,10 +15,9 @@ ProGuard para analizar el impacto en la ingeniería inversa.
 
 ## 🏗️ Tecnologías Utilizadas
 
--   Java 17+
--   Maven
+-   Java 11.0.30
+-   Maven 3.9.12
 -   ProGuard
--   IntelliJ IDEA / VS Code
 
 ------------------------------------------------------------------------
 
@@ -62,7 +61,7 @@ mvn clean package -P obfuscate
 
 Esto generará:
 
-    target/stackHandler-0.0.1-SNAPSHOT-obf.jar
+    target/stackHandler-0.0.1-SNAPSHOT-jar-with-dependencies-obf.jar
 
 ------------------------------------------------------------------------
 
@@ -71,27 +70,13 @@ Esto generará:
 ### Ejecutar JAR Normal
 
 ``` bash
-java -jar target/stackHandler-0.0.1-SNAPSHOT.jar "(a+b)*[c-d]"
+java -jar target/stackHandler-0.0.1-SNAPSHOT-jar-with-dependencies.jar "(a+b)*[c-d]"
 ```
 
 ### Ejecutar JAR Ofuscado
 
 ``` bash
-java -jar target/stackHandler-0.0.1-SNAPSHOT-obf.jar "(a+b)*[c-d]"
-```
-
-### Ejecutar usando alias personalizado (Windows)
-
-Puedes definir un alias temporal:
-
-``` bash
-doskey runstack=java -jar target/stackHandler-0.0.1-SNAPSHOT-obf.jar $*
-```
-
-Luego ejecutar:
-
-``` bash
-runstack "(a+b)*[c-d]"
+java -jar target/stackHandler-0.0.1-SNAPSHOT-jar-with-dependencies-obf.jar "(a+b)*[c-d]"
 ```
 
 ------------------------------------------------------------------------
@@ -145,9 +130,3 @@ comprender el sistema.
 -   La ofuscación protege parcialmente el código.
 -   La ingeniería inversa sigue siendo posible, pero más compleja.
 
-------------------------------------------------------------------------
-
-## 👨‍💻 Autor
-
-Proyecto académico desarrollado para análisis de estructuras de datos y
-seguridad de software.

@@ -15,7 +15,7 @@ ProGuard para analizar el impacto en la ingeniería inversa.
 
 ## 🏗️ Tecnologías Utilizadas
 
--   Java 11.0.30
+-   Java 11
 -   Maven 3.9.12
 -   ProGuard
 
